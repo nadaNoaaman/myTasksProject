@@ -1,0 +1,24 @@
+{{>header}}
+{{>navbar}}
+      <form method="post">
+        <label for="add" class="my-2">Type of transaction:</label>
+        <div class="btn-3">
+          <input type="radio" name="add" value="addBalance" />
+          <label for="add">Add</label>
+          <input type="radio" name="add" id="withdraw" value="withdraw" />
+          <label for="withdraw">Withdraw</label>
+        </div>
+        <div class="btn-3">
+          <label class="mt-4">Value</label>
+          <input
+            name="value"
+            
+            class=" form-control w-25"
+            
+          />
+        </div>
+        <div class="btn-3">
+          <button class="btn btn-success my-3">Done</button>
+        </div>
+      </form>
+{{>footer}}

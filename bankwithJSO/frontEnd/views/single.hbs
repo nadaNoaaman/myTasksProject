@@ -1,0 +1,30 @@
+{{>header}}
+{{>navbar}}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>intial balance</th>
+            <th>Address</th>
+            {{!-- <th>transactions</th> --}}
+            <th>total balance</th>
+            <th>deposite</th>
+            <th>withdraw</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+         <td>{{user.username}}</td>
+         <td>{{user.phone}}</td>
+         <td>{{user.intial}}</td>
+         <td>{{user.address}}</td>
+         <td>{{user.totalbalance}}</td>
+         <td>{{user.added}}</td>
+         <td>{{user.withdrawed}}</td>
+      
+         
+        </tr>
+    </tbody>
+</table>
+{{>footer}}

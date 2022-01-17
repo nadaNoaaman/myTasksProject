@@ -1,0 +1,40 @@
+{{>header}}
+{{>navbar}}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>intial balance</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#if isEmpty}}
+    <tr >
+    <td colspan="6" class="bg-danger text-white text-center ">No users</td>
+</tr>
+{{else}}
+        {{#each data}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.username}}</td>
+            <td>{{this.phone}}</td>
+            <td>{{this.intial}}</td>
+            <td>{{this.address}}</td>
+            <td>
+                <a href="/single/{{this.id}}" class="btn btn-primary my-3">show</a>
+                {{!-- <a href="/AddWithdraw" class="btn btn-success my-3">Add/withdraw</a> --}}
+                <a href="/editUser/{{this.id}}" class="btn btn-warning my-3">Edit</a>
+                <a href="/addMoney/{{this.id}}" class="btn btn-success my-3">Add</a>
+                <a href="/withdraw/{{this.id}}" class="btn btn-info my-3">withdraw</a>
+                <a href="/delete/{{this.id}}" class="btn btn-danger my-3">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+        {{/if}}
+    </tbody>
+</table>
+{{>footer}}
